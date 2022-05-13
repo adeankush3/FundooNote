@@ -6,9 +6,12 @@ using System.Text;
 
 namespace RepositoryLayer.FundooContext
 {
-    public class FundooDBContext
+    public class FundooDBContext : DbContext
     {
-       
+        public FundooDBContext(DbContextOptions options) : base(options)
+        {
+
+        }
         public DbSet<User> Users { get; set; }
     }
 }
